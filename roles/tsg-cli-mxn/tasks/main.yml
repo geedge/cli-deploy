@@ -1,0 +1,40 @@
+---
+- name: "copy tsg-cli rmp to destination server"
+  synchronize:
+    src: "{{ role_path }}/../tsg-common-files/{{ rpm_file_name }}"
+    dest: "/tmp/tsg-cli-deploy/"
+    
+- name: "install tsg-cli"
+  yum:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+    - /tmp/tsg-cli-deploy/{{ rpm_file_name }}
+
+- name: Template the tsg_sn.json
+  template:
+    src: "{{ role_path }}/templates/tsg_sn.json.j2"
+    dest: /opt/tsg/etc/tsg_sn.json
+  tags: template
+  
+- name: "copy tsg-monitor.service to destination server"
+  synchronize:
+    src: "{{ role_path }}/files/tsg-monitor.service"
+    dest: "/usr/lib/systemd/system"
+
+- name: "copy tsg-monitor.sh to destination server"
+  #synchronize:
+  copy:
+    src: "{{ role_path }}/files/tsg-monitor.sh"
+    dest: "/opt/tsg/tsg-monitor/"    
+    mode: 0755  
+
+- name: "reload systemd config"
+  command: systemctl daemon-reload
+
+- name: "enable tsg-monitor service"
+  command: systemctl enable tsg-monitor.service 
+  
+- name: "start tsg-monitor service"
+  command: systemctl start tsg-monitor.service
