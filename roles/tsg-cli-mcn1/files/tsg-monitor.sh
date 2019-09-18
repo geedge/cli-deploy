@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#mcn1-3
+#mcn1
 
 #防止因上一次的命令阻塞或长时间未返回,
 #导致10秒内还不结束, 强行杀掉,
@@ -9,7 +9,6 @@ killall_uncompleted_cmd(){
     #killall -9 tsg_cluster_register
     killall -9 tsg_diagnose_background
     killall -9 tsg_update_tags
-   
     killall -9 tsg_monit_interface
 
 }

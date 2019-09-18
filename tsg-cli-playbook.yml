@@ -10,14 +10,14 @@
     
 - hosts: sled-mcn1 
   roles:
-    - tsg-cli-mcn1-3
+    - tsg-cli-mcn1
 
 
 - hosts: sled-mcn2
   roles:
-    - tsg-cli-mcn1-3
+    - tsg-cli-mcn2
 
     
 - hosts: sled-mcn3  
   roles:
-    - tsg-cli-mcn1-3
+    - tsg-cli-mcn3
