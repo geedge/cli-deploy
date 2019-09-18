@@ -6,19 +6,18 @@
 - hosts: sled-mcn0
   roles:
     - tsg-cli-mcn0
-    - tsg-env-mcn0
 
+    
 - hosts: sled-mcn1 
   roles:
     - tsg-cli-mcn1-3
-    - tsg-env-mcn1
+
 
 - hosts: sled-mcn2
   roles:
     - tsg-cli-mcn1-3
-    - tsg-env-mcn2
+
     
 - hosts: sled-mcn3  
   roles:
     - tsg-cli-mcn1-3
-    - tsg-env-mcn3
