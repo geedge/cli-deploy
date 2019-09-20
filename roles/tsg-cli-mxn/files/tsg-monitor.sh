@@ -6,9 +6,9 @@
 #导致10秒内还不结束, 要强行杀掉,
 #否则长时间运行后, 会有大量后台进程运行!
 killall_uncompleted_cmd(){
-    killall -9 tsg_cluster_register
-    #killall -9 tsg_diagnose_background
-    killall -9 tsg_update_tags
+    killall -9 -q tsg_cluster_register
+    #killall -9 -q tsg_diagnose_background
+    killall -9 -q tsg_update_tags
 }
 
 start_background_cmd(){

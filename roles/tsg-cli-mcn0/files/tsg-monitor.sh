@@ -7,16 +7,16 @@
 #否则长时间运行后, 会有大量后台进程运行
 killall_uncompleted_cmd(){
     #killall -9 tsg_cluster_register
-    killall -9 tsg_diagnose_background
-    killall -9 tsg_update_tags
+    killall -9 -q tsg_diagnose_background
+    killall -9 -q tsg_update_tags
     
-    killall -9 tsg_monit_app
-    killall -9 tsg_monit_intercept
-    killall -9 tsg_monit_interface
-    killall -9 tsg_monit_protocol_v3
-    killall -9 tsg_monit_protocol_v4
-    killall -9 tsg_monit_stream_v3
-    killall -9 tsg_monit_stream_v4
+    killall -9 -q tsg_monit_app
+    killall -9 -q tsg_monit_intercept
+    killall -9 -q tsg_monit_interface
+    killall -9 -q tsg_monit_protocol_v3
+    killall -9 -q tsg_monit_protocol_v4
+    killall -9 -q tsg_monit_stream_v3
+    killall -9 -q tsg_monit_stream_v4
 }
 
 start_background_cmd(){
