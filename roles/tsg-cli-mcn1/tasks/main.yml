@@ -35,11 +35,8 @@
     dest: "/opt/tsg/tsg-monitor/"    
     mode: 0755  
   
-- name: "reload systemd config"
-  command: systemctl daemon-reload
-
 - name: "enable tsg-monitor service"
-  command: systemctl enable tsg-monitor.service 
-  
-#- name: "start tsg-monitor service"
-#  command: systemctl start tsg-monitor.service
+  systemd:
+    name: tsg-monitor
+    enabled: yes
+    daemon_reload: yes

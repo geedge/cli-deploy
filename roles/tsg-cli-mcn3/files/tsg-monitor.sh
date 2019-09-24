@@ -10,7 +10,7 @@ killall_uncompleted_cmd(){
     killall -9 -q tsg_diagnose_background
     killall -9 -q tsg_update_tags
     killall -9 -q tsg_monit_interface
-
+    killall -9 -q tsg_monit_intercept
 }
 
 start_background_cmd(){
@@ -19,6 +19,7 @@ start_background_cmd(){
     /opt/tsg/tsg-monitor/tsg_diagnose_background > /dev/null &
     /opt/tsg/tsg-monitor/tsg_update_tags > /dev/null &
     /opt/tsg/tsg-monitor/tsg_monit_interface > /dev/null &
+	/opt/tsg/tsg-monitor/tsg_monit_intercept > /dev/null &
 }
 
 #return value: current time in ms

@@ -1,0 +1,28 @@
+[all:vars]
+ansible_user=root
+rpm_file_name=tsg-cli-1.0.7-1.el7.x86_64.rpm 
+
+[sled-mxn]
+192.168.40.25 SN=CBT2201925000002
+
+[sled-mcn0]
+192.168.40.21 SN=CBT2201925000002
+
+[sled-mcn1]
+192.168.40.22 SN=CBT2201925000002
+
+[sled-mcn2]
+192.168.40.23 SN=CBT2201925000002
+
+[sled-mcn3]
+192.168.40.24 SN=CBT2201925000002
+
+[tsg-all:children]
+sled-mxn
+sled-mcn0
+sled-mcn1
+sled-mcn2
+sled-mcn3
+
+
+
