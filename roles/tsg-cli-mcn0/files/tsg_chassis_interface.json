@@ -5,12 +5,6 @@
 		"dev_name": "ens1f4",
 		"dev_type": "marsio",
 		"flow_type": "inline"
-	},
-	{
-		"dev_name": "ens1f5",
-		"dev_type": "marsio",
-		"flow_type": "inline"
 	}
-
 	]
 }
