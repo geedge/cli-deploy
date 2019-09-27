@@ -1,6 +1,6 @@
 [all:vars]
 ansible_user=root
-rpm_file_name=tsg-cli-1.0.6-1.el7.x86_64.rpm 
+rpm_file_name=tsg-cli-1.0.9.abea4ae-1.el7.x86_64.rpm
 
 [sled-mxn]
 10.4.164.23 SN=CBT2201840103110

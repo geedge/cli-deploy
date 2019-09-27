@@ -41,3 +41,7 @@
     enabled: yes
     daemon_reload: yes
 
+- name: "copy rsyslog.conf to destination server"
+  synchronize:
+    src: "{{ role_path }}/files/rsyslog.conf"
+    dest: "/etc/"

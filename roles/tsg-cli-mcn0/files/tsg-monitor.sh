@@ -13,9 +13,9 @@ killall_uncompleted_cmd(){
     killall -9 -q tsg_monit_app
     killall -9 -q tsg_monit_intercept
     killall -9 -q tsg_monit_interface
-    killall -9 -q tsg_monit_protocol_v3
+    #killall -9 -q tsg_monit_protocol_v3
     killall -9 -q tsg_monit_protocol_v4
-    killall -9 -q tsg_monit_stream_v3
+    #killall -9 -q tsg_monit_stream_v3
     killall -9 -q tsg_monit_stream_v4
 }
 
@@ -28,9 +28,9 @@ start_background_cmd(){
     /opt/tsg/tsg-monitor/tsg_monit_app > /dev/null &
     /opt/tsg/tsg-monitor/tsg_monit_intercept > /dev/null &
     /opt/tsg/tsg-monitor/tsg_monit_interface > /dev/null &
-    /opt/tsg/tsg-monitor/tsg_monit_protocol_v3 > /dev/null &
+    #/opt/tsg/tsg-monitor/tsg_monit_protocol_v3 > /dev/null &
     /opt/tsg/tsg-monitor/tsg_monit_protocol_v4 > /dev/null &
-    /opt/tsg/tsg-monitor/tsg_monit_stream_v3 > /dev/null &
+    #/opt/tsg/tsg-monitor/tsg_monit_stream_v3 > /dev/null &
     /opt/tsg/tsg-monitor/tsg_monit_stream_v4 > /dev/null &    
 }
 
