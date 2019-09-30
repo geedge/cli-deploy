@@ -17,6 +17,12 @@ rpm_file_name=tsg-cli-1.0.9.abea4ae-1.el7.x86_64.rpm
 [sled-mcn3]
 192.168.40.24 SN=CBT2201925000002
 
+[Functional_Host:children]
+sled-mcn0
+sled-mcn1
+sled-mcn2
+sled-mcn3
+
 [tsg-all:children]
 sled-mxn
 sled-mcn0
