@@ -1,0 +1,12 @@
+---
+- hosts: sled-mcn0 sled-mcn1 sled-mcn2 sled-mcn3 sled-mxn
+  tasks:
+    - name: "stop tsg-monitor service"
+      service:
+        name: tsg-monitor
+        state: stopped
+
+    - name: "uninstall tsg-cli"
+      yum:
+        name: "tsg-cli"
+        state: absent          

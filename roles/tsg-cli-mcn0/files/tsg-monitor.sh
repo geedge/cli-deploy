@@ -77,7 +77,7 @@ sleep_for_time_ms(){
 
 while [ 1 ]; do
     start_time=`get_current_time_in_ms`
-    echo tsg-monitor start at `date +"%Y/%m/%d, %H:%M:%S.%N"` >> /tmp/tsg-monitor.log
+    #echo tsg-monitor start at `date +"%Y/%m/%d, %H:%M:%S.%N"` >> /tmp/tsg-monitor.log
     
     start_background_cmd 
     sleep 10
